@@ -18,7 +18,10 @@ void print_times_table(int n)
 		printf("0");
 	}
 	printf("\n");*/
-	int i, j;
+	int i;
+
+	int j;
+
 	for (i = 0; i <= n; i++)
 	{
 	/*	printf("%4d", i);*/
