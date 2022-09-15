@@ -9,15 +9,9 @@
 void print_times_table(int n)
 {
 	if (n > 15 || n < 0)
-		return;
-	/*
-	int i;
-
-	for (i = 1; i <= n; i++)
 	{
-		printf("0");
+		return;
 	}
-	printf("\n");*/
 	int i;
 
 	int j;
