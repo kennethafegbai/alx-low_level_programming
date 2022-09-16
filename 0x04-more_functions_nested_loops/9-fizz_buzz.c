@@ -19,10 +19,9 @@ for (i = 1; i <= 100; i++)
 		printf("Buzz");
 	else
 		printf("%d", i);
-	/**
-	 * if (i == 100)
-	 *	break;
-	 */
+	if (i == 100)
+		break;
+
 	printf(" ");
 }
 printf("\n");
