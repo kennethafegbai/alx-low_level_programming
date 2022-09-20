@@ -22,7 +22,7 @@ void rev_string(char *s)
 	while (half_string >= 0)
 	{
 		first_letter = s[full_string - half_string];
-		last_letter =s[half_string];
+		last_letter = s[half_string];
 		s[half_string] = first_letter;
 		s[full_string - half_string] = last_letter;
 		half_string--;
