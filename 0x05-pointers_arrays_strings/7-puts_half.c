@@ -15,12 +15,23 @@ void puts_half(char *str)
 	}
 
 	last = i;
-
-	half = last / 2;
-
-	for (i = half; str[i]; i++)
+	if (last % 2 == 0)
 	{
-		_putchar(str[i]);
+
+		half = last / 2;
+
+		for (i = half; str[i]; i++)
+		{
+			_putchar(str[i]);
+		}
+	}
+	else
+	{
+		half = ((last - 1) / 2) + 1;
+		for (i = half; str[i]; i++)
+		{
+			_putchar(str[i]);
+		}
 	}
 	_putchar('\n');
 }
