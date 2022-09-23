@@ -8,43 +8,23 @@
 
 char *leet(char *str)
 {
-	int count, i;
+int i, j;
+char c[] = "aAeEoOtTlL";
+char n[] = "4433007711";
 
-	count = 0;
-
-	int low_cases[5];
-	int up_cases[5];
-	int numbers[5];
-
-	low_cases[0] = 97;
-	low_cases[1] = 101;
-	low_cases[2] = 111;
-	low_cases[3] = 116;
-	low_cases[4] = 108;
-
-	up_cases[0] = 65;
-	up_cases[1] = 69;
-	up_cases[2] = 79;
-	up_cases[3] = 84;
-	up_cases[4] = 76;
-
-	numbers[0] = 52;
-	numbers[1] = 51;
-	numbers[2] = 48;
-	numbers[3] = 55;
-	numbers[4] = 49;
-
-	while (*(str + count) != '\0')
+i = 0;
+while (str[i] != '\0')
+{
+	j = 0;
+	while (c[j] != '\0')
 	{
-		for (i = 0; i < 5; i++)
+		if (str[i] == c[j])
 		{
-			if (*(str + count) == low_cases[i] || *(str + count) == up_cases[i])
-			{
-				*(str + count) = numbers[i];
-				break;
-			}
-		}
-		count++;
+			str[i] = n[j];
+																								}
+		j++;
 	}
-	return (str);
+	i++;
+}
+return (str);
 }
