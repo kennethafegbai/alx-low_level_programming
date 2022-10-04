@@ -1,30 +1,33 @@
 #include "main.h"
-/**
- * is_prime_number - returns 1 if the input
- * integer is a prime number, otherwise return 0
- * @n: param
- * @i: param for checkPrime function
- * Return: returns 1 on success otherwise 0
- */
-int checkPrime(int n, int i);
 
+/**
+ * prime_a - main - check the code
+ * @a: number
+ * @b: number of power
+ * Return: Always 0.
+ */
+
+int prime_a(int a, int b)
+{
+	if (a <= 1 || (a != b && a % b == 0))
+	{
+		return (0);
+								}
+	else if (a == b)
+	{
+		return (1);
+	}
+	return (prime_a(a, b + 1));
+}
+
+
+/**
+ * is_prime_number - main - check the code
+ * @n: number
+ *
+ * Return: Always 0.
+ */
 int is_prime_number(int n)
 {
-       return (checkPrime(n, 2));
+	return (prime_a(n, 2));
 }
-
-/**
- * checkPrime - check for prime number
- * @n: param 1
- * @i: param 2
- * Return: returns 1 or 0
- */
-int checkPrime(int n, int i)
-{
-	if (n == i)
-		return (1);
-	if ((n % i) == 0)
-		return (0);
-	return (checkPrime(n, i + 1));
-}
-
