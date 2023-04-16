@@ -7,6 +7,13 @@
 /* helpers */
 void print_array(int *array, size_t inc, size_t size);
 
+/**
+ * struct skiplist_s - struct list
+ * @n: number
+ * @index: index parameter
+ * @next: next item
+ * @express: express parameter
+ */
 typedef struct skiplist_s
 {
 				int n;
@@ -15,6 +22,12 @@ typedef struct skiplist_s
 				struct skiplist_s *express;
 } skiplist_t;
 
+/**
+ * struct listint_s - struct list
+ * @n: number
+ * @next: next parameter
+ * @index: index  parameter
+ */
 typedef struct listint_s
 {
 		int n;
